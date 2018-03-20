@@ -4,7 +4,6 @@ const hook = new Discord.WebhookClient('266505631291277312', 'SzWsowk5Va2ZdXuhkM
 const Cleverbot = require("cleverbot-node");
 cleverbot = new Cleverbot;
 const fs = require("fs");
-const config = require('./config.json');
 
 //const points = JSON.parse(fs.readFileSync('./points.json', 'utf8'));
 //const coins = JSON.parse(fs.readFileSync('./coins.json', 'utf8'));
@@ -64,7 +63,7 @@ client.on('message', msg => {
 }});
 
 
-        let prefix = config.prefix;
+        let prefix = "#"
 
       let command = msg.content.split(" ")[0];
   command = command.slice(msg.length);
