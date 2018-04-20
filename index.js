@@ -12,15 +12,6 @@ client.on("ready", () =>  {
   client.user.setGame("#help", "https://www.twitch.tv/roblox")
   client.user.setAFK(true)
 });
-client.on('voicechannel', stream => {
-  voiceChannel.join()
-   .then(connection => {
-     const stream = ytdl('https://www.youtube.com/watch?v=XAWgeLF9EVQ', {filter : 'audioonly'});
-     const dispatcher = connection.playStream(stream, streamOptions);
-   })
-   .catch(console.error);
-
-});
 
 
 client.on('guildMemberAdd', member => {
@@ -35,10 +26,10 @@ client.on('guildMemberRemove', member => {
 });
 
 client.on('message', msg => {
-    let prefix = "#";
+    const prefix = "#";
   if(!msg.content.startsWith(prefix)) return;
 
-  let command = msg.content.split(" ")[0];
+  const command = msg.content.split(" ")[0];
   command = command.slice(prefix.length);
 
   let args = msg.content.split(" ").slice(1);
