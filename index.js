@@ -9,7 +9,7 @@ hook.sendMessage('i suck at webhooks tbh');
 client.on("ready", () =>  {
   console.log("Bot powerered! use CTRL + C to shutdown")
   client.user.setStatus("dnd")
-  client.user.setGame("with Ahuttee", "https://www.twitch.tv/roblox")
+  client.user.setGame("#help", "https://www.twitch.tv/roblox")
   client.user.setAFK(true)
 });
 client.on('voicechannel', stream => {
