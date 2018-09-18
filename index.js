@@ -66,7 +66,7 @@ client.on('message', msg => {
 }});
 
 
-        let prefix = config.prefix;
+        let prefix = '#'
 
       let command = msg.content.split(" ")[0];
   command = command.slice(msg.length);
