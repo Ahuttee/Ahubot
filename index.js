@@ -77,12 +77,6 @@ client.on('message', msg => {
 
   if(msg.author.bot) return;
 
-if(msg.content.startsWith(prefix + "changeprefix")) {
-   if(msg.author.id !== "203488399061942272") return msg.channel.sendMessage(":no_entry: **You dont have permission** no_entry:")
-  config.prefix = args[0];
-  fs.writeFile('./config.json', JSON.stringify(config), (err) => {if(err) console.error(err)})
-    msg.channel.sendMessage("Changed prefix to **" + args.join(" ") + "**")
-}
 
 
 
