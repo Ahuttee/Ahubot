@@ -2,7 +2,7 @@
   "name": "ahuttee",
   "version": "1.0.0",
   "description": "",
-  "main": "bot-data.js",
+  "main": "index.js",
   "dependencies": {
     "cleverbot-node": "^0.2.8",
     "cleverbot.io": "^1.0.4",
@@ -24,8 +24,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "Ahuttee",
   "license": "ISC"
 }
