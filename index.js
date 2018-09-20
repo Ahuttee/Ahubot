@@ -1158,7 +1158,7 @@ if(msg.content.startsWith(prefix + "invite")) {
   fields: [
     {
       name: "**Commands from AhuBot**",
-      value: "**#invite**\n shows you the invite link for the bot\n**#del**\n Usage: #del (amount)\n**#divide (number1) (number2)**\n Divides a number for example: '#divide 2 4' which equals.. 2\n**#multiply (number1) (number2)**\n Multiplys a number you say\n**#add (number1) (number2)**\n adds a number\n**#subtract**\n Subtracts a number you send\n**#avatar**\n Shows up your avatar\n**#say (message)**\n sends the message usage: (#say something) which shows up 'something'\n **#kick**\n Kicks a user.. usage: #kick @user\n**#help**\n shows up this help menu\n**#invite**\n Shows you the invite link!\n**#ban**\nUsage: #ban @user\n**#ping**\nPings.. nothing useful about that..\n BOT CREATED BY AHUTTEE ;3"
+      value: "**#invite**\n shows you the invite link for the bot\n**#del**\n Usage: #del (amount)\n**#divide (number1) (number2)**\n Divides a number for example: '#divide 2 4' which equals.. 2\n**#multiply (number1) (number2)**\n Multiplys a number you say\n**#add (number1) (number2)**\n adds a number\n**#subtract**\n Subtracts a number you send\n**#avatar**\n Shows up your avatar\n**#say (message)**\n sends the message usage: (#say something) which shows up 'something'\n**#neko**\nNekos!\n **#kick**\n Kicks a user.. usage: #kick @user\n**#help**\n shows up this help menu\n**#invite**\n Shows you the invite link!\n**#ban**\nUsage: #ban @user\n**#ping**\nPings.. nothing useful about that..\n BOT CREATED BY AHUTTEE ;3"
     }
   ],
   timestamp: new Date(),
