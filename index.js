@@ -338,10 +338,6 @@ var Wiki = require('wikijs');
       msg.channel.sendMessage(err);
     });
   }
-  if(msg.content.startsWith(prefix + "test333")) {
-   let evaled = eval(args.join(" "))
-   msg.channel.sendMessage(evaled)
-  }
 
   if(msg.content.startsWith(prefix + "giphy")) {
     var qs = require("querystring");
@@ -1125,29 +1121,6 @@ if(msg.content.startsWith(prefix + "omfg")) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if(msg.content.startsWith(prefix + "invite")) {
   msg.reply("https://discordapp.com/oauth2/authorize?client_id=268769345990033409&scope=bot&permissions=1177734151")
 }
@@ -1180,22 +1153,6 @@ if(msg.content.startsWith(prefix + "invite")) {
 
 
 
-
-  if (msg.content.startsWith(prefix + "eval")) {
-    if(args <1) return;
-    if(msg.author.id !== "203488399061942272") return msg.channel.sendMessage(":no_entry: Restricted command :no_entry:")
-    try {
-      var code = args.join(" ");
-      var evaled = eval(code);
-
-      if (typeof evaled !== "string")
-        evaled = require("util").inspect(evaled);
-
-      msg.channel.sendCode("xl", clean(evaled));
-    } catch (err) {
-      msg.channel.sendMessage(`\`you got an error(- ͜-)\` \`\`\`xl\n${clean(err)}\n\`\`\``);
-    }
-  }
 
 
 
