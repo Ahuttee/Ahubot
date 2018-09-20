@@ -100,14 +100,15 @@ if(msg.content.startsWith(prefix + "sourcecode")) {
 
 
 if(msg.content.startsWith(prefix + "play")) {
-  if(args.length <1) {
-    msg.reply("Play what?")
-  }
+
   const yt = require('ytdl-core');
   const voiceChannel = msg.member.voiceChannel;
     if (!voiceChannel) {
       return msg.reply(`Please be in a voice channel first!`);
-    }
+    }else {
+        if(args.length <1) {
+    msg.reply("Play what?")
+  }
     voiceChannel.join()
       .then(connnection => {
         let stream = yt(args.join(" "), {audioonly: true});
@@ -117,6 +118,7 @@ if(msg.content.startsWith(prefix + "play")) {
         });
       });
     }
+   }
 
 
 
