@@ -100,6 +100,9 @@ if(msg.content.startsWith(prefix + "sourcecode")) {
 
 
 if(msg.content.startsWith(prefix + "play")) {
+  if(args.length <1) {
+    msg.reply("Play what?")
+  }
   const yt = require('ytdl-core');
   const voiceChannel = msg.member.voiceChannel;
     if (!voiceChannel) {
