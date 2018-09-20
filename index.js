@@ -138,12 +138,12 @@ client.channels.get("223064367682289665").send("", {embed: {
     icon_url: msg.author.avatarURL
   }
 }});
+}
 
-
-
-
-
-  if(msg.content.startsWith(prefix + "lewd")) {
+  //LEWD COMMAND
+  
+  
+    if(msg.content.startsWith(prefix + "lewd")) {
       if(!msg.channel.nsfw) {
         return msg.reply("This command can only be used in NSFW channels!")
       }else {
@@ -161,15 +161,23 @@ client.channels.get("223064367682289665").send("", {embed: {
       }
 
     }
-
-
-
-
-
-
-
-}
-
+  
+  
+  //LEWD COMMAND END
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
