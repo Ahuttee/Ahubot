@@ -1182,6 +1182,7 @@ if(msg.content.startsWith(prefix + "invite")) {
 
 
   if (msg.content.startsWith(prefix + "eval")) {
+    if(args <1) return;
     if(msg.author.id !== "203488399061942272") return msg.channel.sendMessage(":no_entry: Restricted command :no_entry:")
     try {
       var code = args.join(" ");
@@ -1197,9 +1198,6 @@ if(msg.content.startsWith(prefix + "invite")) {
   }
 
 
-    if(msg.content === 'say') {
-      msg.reply(msg.suffix);
-    }
 
 });
 
