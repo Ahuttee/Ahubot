@@ -4,6 +4,8 @@ const hook = new Discord.WebhookClient('266505631291277312', 'SzWsowk5Va2ZdXuhkM
 const Cleverbot = require("cleverbot-node");
 cleverbot = new Cleverbot;
 const fs = require("fs");
+const nekoclient = require('nekos.life');
+const neko = new nekoclient();
 
 //const points = JSON.parse(fs.readFileSync('./points.json', 'utf8'));
 //const coins = JSON.parse(fs.readFileSync('./coins.json', 'utf8'));
@@ -136,7 +138,24 @@ client.channels.get("223064367682289665").send("", {embed: {
 
 
 
+  if(msg.content.startsWith(prefix + "lewd")) {
+      if(!msg.channel.nsfw) {
+        return msg.reply("This command can only be used in NSFW channels!")
+      }else {
+        async function test() {
+         let { url } = await neko.getNSFWNeko();
+         var nekoembed = new Discord.RichEmbed()
+         nekoembed.setImage(url);
+         nekoembed.setColor("#c690ff");
+         nekoembed.setAuthor("LEWD Neko!");
+         nekoembed.setFooter("Image Provided By nekos.life");
+         msg.channel.send(nekoembed);
+       }
+      
+     test()
+      }
 
+    }
 
 
 
@@ -842,8 +861,6 @@ msg.channel.sendMessage(`:ok_hand: deleted **${args.join( )}** messages!`)
 
 
 if(msg.content.startsWith(prefix + "neko")) {
-  const client = require('nekos.life');
-  const neko = new client();
    async function test() {
     let { url } = await neko.getSFWNeko();
     var nekoembed = new Discord.RichEmbed()
