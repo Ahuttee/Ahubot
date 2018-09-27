@@ -22,7 +22,7 @@ if(client.disconnect) {
 client.on("ready", () => {
   console.log("Bot powerered! use CTRL + C to shutdown")
   client.user.setStatus("dnd")
-  client.user.setGame(`#help | ${client.guilds.size} servers`, "https://www.twitch.tv/ /")
+  client.user.setGame(`a!help | ${client.guilds.size} servers`, "https://www.twitch.tv/ /")
   client.user.setAFK(true)
 });
 
@@ -42,7 +42,7 @@ client.on('disconnect', discon => {
 
 
 client.on('guildCreate', del => {
-  del.defaultChannel.sendMessage("Hey thanks for inviting me type #help for a bunch of my commands" + " **\nmade by Ahuttee#2791 and with the power of discord.js**")
+  del.defaultChannel.sendMessage("Hey thanks for inviting me type a!help for a bunch of my commands" + " **\nmade by Ahuttee#2791 and with the power of discord.js**")
 })
 
 
@@ -68,7 +68,7 @@ client.on('message', msg => {
 }});
 
 
-        let prefix = '#'
+        let prefix = 'a!'
 
       let command = msg.content.split(" ")[0];
   command = command.slice(msg.length);
@@ -122,23 +122,8 @@ if(msg.content.startsWith(prefix + "play")) {
 
 
 
-if(msg.content.startsWith(prefix + "bot.reconnect")) {
-  if(!msg.author.id === "203488399061942272") return msg.channel.sendMessage("**Invalid Access**")
- client.disconnect()
-
-}
 
 
-
-if(msg.content.startsWith(prefix + "sendittooplz")) {
-client.channels.get("223064367682289665").send("", {embed: {
-  color: 2550247,
-  author: {
-    name: args.join(" "),
-    icon_url: msg.author.avatarURL
-  }
-}});
-}
 
   //LEWD COMMAND
   
@@ -165,25 +150,7 @@ client.channels.get("223064367682289665").send("", {embed: {
   
   //LEWD COMMAND END
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-if(msg.content.startsWith(prefix + "send1233")) {
-  client.channels.get("255268484215209984").send("xD ty lol")
-}
+ 
 
 
 
@@ -619,7 +586,7 @@ if(msg.content.startsWith(prefix + "avatar")) {
 
 msg.channel.sendEmbed(
   embed,
-  'Your avatar:',
+  '',
   { disableEveryone: true }
 );
 
@@ -638,7 +605,7 @@ msg.channel.sendEmbed(
 
 msg.channel.sendEmbed(
   embed,
-  user.username + "'s avatar",
+  '',
   { disableEveryone: true }
 );
 }
@@ -1131,7 +1098,7 @@ if(msg.content.startsWith(prefix + "invite")) {
   fields: [
     {
       name: "**Commands from AhuBot**",
-      value: "**#invite**\n shows you the invite link for the bot\n**#del**\n Usage: #del (amount)\n**#divide (number1) (number2)**\n Divides a number for example: '#divide 2 4' which equals.. 2\n**#multiply (number1) (number2)**\n Multiplys a number you say\n**#add (number1) (number2)**\n adds a number\n**#subtract**\n Subtracts a number you send\n**#avatar**\n Shows up your avatar\n**#say (message)**\n sends the message usage: (#say something) which shows up 'something'\n**#neko**\nNekos!\n **#kick**\n Kicks a user.. usage: #kick @user\n**#help**\n shows up this help menu\n**#invite**\n Shows you the invite link!\n**#ban**\nUsage: #ban @user\n**#ping**\nPings.. nothing useful about that..\n BOT CREATED BY AHUTTEE ;3"
+      value: "**a!invite**\n shows you the invite link for the bot\n**a!del**\n Usage: a!del (amount)\n**a!divide (number1) (number2)**\n Divides a number for example: 'a!divide 2 4' which equals.. 2\n**a!multiply (number1) (number2)**\n Multiplys a number you say\n**a!add (number1) (number2)**\n adds a number\n**a!subtract**\n Subtracts a number you send\n**a!avatar**\n Shows up your avatar\n**a!say (message)**\n sends the message usage: (a!say something) which shows up 'something'\n **a!kick**\n Kicks a user.. usage: a!kick @user\n**a!help**\n shows up this help menu\n**a!invite**\n Shows you the invite link!\n**a!ban**\nUsage: a!ban @user\n**a!ping**\nPings.. nothing useful about that..\n BOT CREATED BY AHUTTEE ;3"
     }
   ],
   timestamp: new Date(),
@@ -1160,7 +1127,7 @@ if(msg.content.startsWith(prefix + "invite")) {
 
 
 client.on('message', msg => {
-  let prefix = '#';
+  let prefix = 'a!';
        let command = msg.content.split(" ")[0];
   command = command.slice(msg.length);
 
