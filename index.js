@@ -42,7 +42,7 @@ client.on('disconnect', discon => {
 
 
 client.on('guildCreate', del => {
-  del.defaultChannel.sendMessage("Hey thanks for inviting me type a!help for a bunch of my commands" + " **\nmade by Ahuttee#2791 and with the power of discord.js**")
+  del.defaultChannel.sendMessage("Hey thanks for inviting me type a!help for a bunch of my commands" + " **\nmade by Ahuttee and with the power of discord.js** :heart:")
 })
 
 
